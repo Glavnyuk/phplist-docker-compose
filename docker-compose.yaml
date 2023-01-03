@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+   phplist:
+     image: phplist/phplist
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: "root@passw0rd"
+       MYSQL_DATABASE: phplistdb
+       MYSQL_USER: phplist
+       MYSQL_PASSWORD: phplist
+       PHPLIST_ADMINNAME: "adminlist"
+       PHPLIST_ADMINPASSWORD: "@dm1nPasw0rd"
+       PHPLIST_ADMINEMAIL: admin@mail.local
+       PHPLIST_VERSION: latest
+       PORT: 8000
+       HOSTNAME: localhost
+volumes:
+    phplist_volume:
